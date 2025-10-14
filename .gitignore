@@ -1,6 +1,28 @@
 # Rust
-/target/
-#Cargo.lock
 
 # Environment files
 .env
+
+# Ignore the build output directory
+**/target/
+
+# Ignore Cargo's package lock file (optional for libraries)
+Cargo.lock
+
+# Ignore backup and temporary files
+*.rs.bk
+*.swp
+*.tmp
+
+# Ignore IDE/editor settings
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
