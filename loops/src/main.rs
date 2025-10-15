@@ -1,16 +1,20 @@
 fn main() {
-    let mut counter = 0;
+    let mut count = 0;
+    'counting_up: loop {
+        println!("count = {count}");
+        let mut remaining = 10;
 
-    let result = loop {
-        counter += 1;
-
-        println!("value: {counter}");
-
-        if counter == 10 {
-            println!("desired value found");
-            break counter;
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if count == 2 {
+                break 'counting_up;
+            }
+            remaining -= 1;
         }
-    };
-
-    println!("The result is {result}");
+        count += 1
+    }
+    println!("End count = {count}");
 }
