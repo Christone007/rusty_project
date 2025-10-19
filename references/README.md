@@ -1,4 +1,4 @@
 # REFERENCING / BORROWING
 
-Multiple immutable references can be made to a variable but only one mutable
-reference is allowed per time. 
+- At any given time, you can have either one mutable reference or any number of immutable references.
+- References must always be valid - pointing to existing variables
