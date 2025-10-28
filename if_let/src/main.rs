@@ -4,4 +4,9 @@ fn main() {
         Some(max) => println!("The maximum  is configured to be {max}"),
         _ => (),
     }
+
+    let config_min = Some(1u8);
+    if let Some(min) = config_min {
+        println!("The minimum value is {min}");
+    }
 }
