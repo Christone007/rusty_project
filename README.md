@@ -26,3 +26,10 @@
 - all floating point types are signed f32|f64
 - A unit is an empty tuple `let unit: () = ()` and is the value returned implicitly by expressions that don't return any other value.
 
+- if conditions must be given a condition that returns a boolean value
+  > let num = 3
+  > 
+  > if num { ..would not work...}
+  > if num < 3 { ... works ... }
+
+
