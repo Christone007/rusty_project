@@ -30,6 +30,25 @@
   > let num = 3
   > 
   > if num { ..would not work...}
+  >
   > if num < 3 { ... works ... }
 
+- `break value;` can be used to return a value from a loop
+- loops can be labelled and break statement can be called on a labelled loop from an inner loop.
+  ```
+  'loop_name: loop { ... }
+  break 'loop_name;
+  ```
+- ```For``` loops are more efficient when iterating over elements of a collection
 
+### Chapter 4 -> Ownership
+- Each value has an owner.
+- There can be only one owner at a time
+- When the owner goes out of scope, the value will be dropped
+- Types that are stored on the heap cannot be shallow copied, they can however be cloned.
+- Ownership moves around as the value is passed into functions
+- References allow another variable to borrow a value without claiming ownership.
+- At any given time, you can have either one mutable reference or any number of immutable references.
+- References must always be valid.
+- We can take string slices using syntax ```&s[startIndex..endIndex]```
+- String slices and string literals have same type which is `&str`
